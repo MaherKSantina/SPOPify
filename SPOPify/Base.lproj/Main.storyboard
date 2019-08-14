@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ak2-bI-28n">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorite Bands-->
+        <scene sceneID="Xxf-yB-e1l">
+            <objects>
+                <viewController id="B4d-J4-CKa" customClass="FavoriteBandsViewController" customModule="SPOPify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PPw-rL-EFL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiK-Wn-aVB" customClass="BaseTableView" customModule="SPOPify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZiK-Wn-aVB" firstAttribute="top" secondItem="XUw-Wm-C6F" secondAttribute="top" id="FrK-63-2Xd"/>
+                            <constraint firstItem="ZiK-Wn-aVB" firstAttribute="leading" secondItem="XUw-Wm-C6F" secondAttribute="leading" id="Hq9-re-VsB"/>
+                            <constraint firstItem="XUw-Wm-C6F" firstAttribute="bottom" secondItem="ZiK-Wn-aVB" secondAttribute="bottom" id="PYS-EZ-bau"/>
+                            <constraint firstAttribute="trailing" secondItem="ZiK-Wn-aVB" secondAttribute="trailing" id="Zgi-qS-hPF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XUw-Wm-C6F"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorite Bands" id="7oL-aV-pGs"/>
+                    <connections>
+                        <outlet property="mainListing" destination="ZiK-Wn-aVB" id="GSw-mf-aat"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whm-QI-c9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="819.64285714285711"/>
+        </scene>
+        <!--Music Categories-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CategoriesViewController" customModule="SPOPify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9N3-iI-Sru" customClass="BaseTableView" customModule="SPOPify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9N3-iI-Sru" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Afe-U5-rXX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9N3-iI-Sru" secondAttribute="trailing" id="HkD-Tx-p0K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9N3-iI-Sru" secondAttribute="bottom" id="J1v-VN-GNN"/>
+                            <constraint firstItem="9N3-iI-Sru" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e5p-nE-goL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Music Categories" id="Z8G-rC-rhS"/>
+                    <connections>
+                        <outlet property="mainListing" destination="9N3-iI-Sru" id="QNb-SV-U2z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="91.741071428571431"/>
+        </scene>
+        <!--Bands List-->
+        <scene sceneID="eaq-vi-uTc">
+            <objects>
+                <viewController storyboardIdentifier="BandsViewController" id="4EQ-66-UaD" customClass="BandsViewController" customModule="SPOPify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n3K-pi-QAD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tl-y2-RPZ" customClass="BaseTableView" customModule="SPOPify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F10-HL-FYW" firstAttribute="trailing" secondItem="0Tl-y2-RPZ" secondAttribute="trailing" id="50A-Mh-YK1"/>
+                            <constraint firstItem="0Tl-y2-RPZ" firstAttribute="top" secondItem="F10-HL-FYW" secondAttribute="top" id="6mq-mU-Xhl"/>
+                            <constraint firstItem="0Tl-y2-RPZ" firstAttribute="leading" secondItem="n3K-pi-QAD" secondAttribute="leading" id="HrU-ug-LES"/>
+                            <constraint firstItem="F10-HL-FYW" firstAttribute="bottom" secondItem="0Tl-y2-RPZ" secondAttribute="bottom" id="k5f-l5-o1U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F10-HL-FYW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bands List" id="hgT-5K-ztU"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="mainListing" destination="0Tl-y2-RPZ" id="X98-nZ-XMQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6N7-rA-1eS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2892.753623188406" y="91.741071428571431"/>
+        </scene>
+        <!--Band Details-->
+        <scene sceneID="CGD-LU-HQj">
+            <objects>
+                <viewController storyboardIdentifier="BandDetailsViewController" id="qeK-Z1-9GO" customClass="BandDetailsViewController" customModule="SPOPify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gTC-Ph-aVr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="4DU-pj-hcE" customClass="BandItemView" customModule="SPOPify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4DU-pj-hcE" firstAttribute="leading" secondItem="jLf-0Q-CB2" secondAttribute="leading" id="5OP-VY-tFE"/>
+                            <constraint firstItem="jLf-0Q-CB2" firstAttribute="trailing" secondItem="4DU-pj-hcE" secondAttribute="trailing" id="ElT-DJ-fgw"/>
+                            <constraint firstItem="4DU-pj-hcE" firstAttribute="top" secondItem="jLf-0Q-CB2" secondAttribute="top" id="iiM-up-1z3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jLf-0Q-CB2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Band Details" id="KoE-Oe-Rb7"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="mainBandItemView" destination="4DU-pj-hcE" id="7e6-Yk-85t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLB-t2-eCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3918" y="101"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ct7-XQ-D4h">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ak2-bI-28n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e3S-Ms-EbT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="z7O-4e-ePe" kind="relationship" relationship="viewControllers" id="KnI-86-3Vg"/>
+                        <segue destination="XVR-Wf-pYt" kind="relationship" relationship="viewControllers" id="DBT-tJ-rNV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6m-Vf-fHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="YZh-cY-bEf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z7O-4e-ePe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Categories" image="categories-icon" id="etu-ZB-KaD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yfj-zv-IHH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X29-LD-DEW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSM-IM-0m9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="91.741071428571431"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="RVs-Lt-1XH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XVR-Wf-pYt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorite-icon" id="Yux-3m-jXN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P14-oC-xMv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B4d-J4-CKa" kind="relationship" relationship="rootViewController" id="imU-Hp-gpU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILA-3u-Cld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="819.64285714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="categories-icon" width="24" height="24"/>
+        <image name="favorite-icon" width="24" height="24"/>
+    </resources>
+</document>
